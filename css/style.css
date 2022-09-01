@@ -81,6 +81,7 @@ header.shadow .filter-item.active-filter{
     width: 100%;
     background-image: url("../img/Background.webp");
     display: grid;
+    min-height: 480px;
     justify-content: center;
     align-items: center;
 }
