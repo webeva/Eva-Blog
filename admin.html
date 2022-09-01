@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Blog</title>
+    <!-- Link To Css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+        <!--Logo-->
+        <a href="#" class="logo"><span>Eva</span> Blog</a>
+        <!--Post Filter-->
+   
+        
+   
+        </div>
+    </header>
+
+    <!--Home-->
+    
+    <section class="home" id="home">
+       
+        <div class="home-text container">
+            <div class="home-title">The Future Of Social Media</div>
+            <span class="home-subtitle">Stay up with the latest!</span>
+        </div>
+    </section>
+    
+
+    <!--Create Blog-->
+    
+      
+        <div class="create-blog">
+           
+            <input id="title" class="create-input" type="text" placeholder="Title">
+            <input id="header" class="create-input" type="text" placeholder="Header">
+            <input id="name" class="create-input" type="text" placeholder="Name">
+            <input id="category" class="create-input" type="text" placeholder="Category">
+            <textarea id="short" cols="40" rows="4" class="create-input" type="text" placeholder="Short Description"></textarea>
+            <textarea id="article" cols="30" rows="10" class="create-input" placeholder="Article"></textarea>
+            
+            <label for="file-upload" class="custom-file-upload">
+                Upload Image
+            </label>
+            <input id="file-upload" type="file" style="display: none;" accept="image/*">
+            <button onclick="upload()" class="create-blog-btn">Create Blog</button>
+        </div>
+   
+
+    <!--Footer -->
+    <div class="footer container">
+        <p>&#169; Eva Blog</p>
+        <div class="social">
+            <a href="https://twitter.com/web3_eva"><i class='bx bxl-twitter'></i></a>
+            <a href="https://discord.com/invite/4w8299MVTW"><i class='bx bxl-discord-alt' ></i></a>
+        </div>
+    </div>
+
+    <!-- Jquery Cdn-->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+   
+    <!--Link to Js-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script type="module">
+        import API_KEY from "./js/apikey.js"
+        
+        const firebaseConfig = {
+            apiKey: API_KEY,
+            authDomain: "eva-blog-32696.firebaseapp.com",
+            databaseURL : "https://eva-blog-32696-default-rtdb.firebaseio.com" , 
+            projectId: "eva-blog-32696",
+            storageBucket: "eva-blog-32696.appspot.com",
+            messagingSenderId: "182049745777",
+            appId: "1:182049745777:web:342960510f940aa85e24d0",
+            measurementId: "G-L6MQ77HH71"
+        };
+        
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        
+    
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</script>
+</html>
