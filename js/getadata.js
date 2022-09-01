@@ -7,11 +7,12 @@ function getdata(){
         var data = snapshot.val()
         
         for(let[key,value] of Object.entries(data)){
+           
             posts.innerHTML += `
             <div class="blog-box ${value.category.toUpperCase()}">
             <img src="${value.image}" alt="Blog Image" class="blog-img">
             <h2 class="category">${value.category}</h2>
-            <a href="post-page.html?id=${Object.keys(data)[0]}" class="blog-title">${value.title}</a>
+            <a href="post-page.html?id=${key}" class="blog-title">${value.title}</a>
             <span class="blog-date">${value.time}</span>
             <p class="blog-description">${value.des}</p>
             <!--Profile-->

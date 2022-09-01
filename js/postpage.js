@@ -1,9 +1,12 @@
 const urlSplit = new URLSearchParams(window.location.search)
 let param = urlSplit.get("id")
+
 function getData(){
-    firebase.database().ref('blogs/').once('value').then(function(snapshot){
+    firebase.database().ref('blogs/' + param).once('value').then(function(snapshot){
         var data = snapshot.val()
-        const value =Object.values(data)[0]
+
+        const value =data
+        console.log(value)
        
         document.getElementById("headertitle").innerText = value.title
         document.getElementById("post-image").src = value.image
